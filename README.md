@@ -1,5 +1,2 @@
 # ScrapeSenseLLM
-
-January 2026 prototype of my MSc thesis tooling, now superseded.
-
-The final pipeline and results: **[Hotpopize/NootropicRedditScrapePPM](https://github.com/Hotpopize/NootropicRedditScrapePPM)**
+A tool designed for qualitative analysis of Reddit data, focusing on the "Nootropics" market using the Push-Pull-Mooring (PPM) framework. This application integrates data scraping, Local LLM-assisted thematic coding, and an interactive dashboard for academic research.
