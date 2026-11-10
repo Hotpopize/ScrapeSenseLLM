@@ -17,31 +17,26 @@ map uses the 609 submissions.
   r/Biohackers      105    +0.415          17.1 Self-Directed Natural Optimiser
   r/Decaf           107    +0.091          29.9 Caffeine/Stimulant Escapee
 
-Balance is the push-pull balance, (PULLâââPUSH)/(PULLâ+âPUSH). Mooring
+Balance is the push-pull balance, (PULL-PUSH)/(PULL+PUSH). Mooring
 is mooring prevalence, the share of submissions with any mooring code.
 
 All six communities read net-pull. r/Decaf is the exception in degree:
 push (40) nearly matches pull (48). Mooring then splits the rest,
 highest in r/NooTopics and r/Supplements, lowest in r/Biohackers.
 
-Inter-rater agreement was slight (Cohen's kappa 0.115 Llama–researcher, 0.151 Gemma–researcher, 0.047 Llama–Gemma), so the archetypes are an interpretive, community-level reading rather than a measurement.
+Inter-rater agreement was slight (Cohen's kappa 0.115 Llama–researcher, 0.151 Gemma–researcher, 0.047 Llama–Gemma), so the archetypes are an interpretive, community-level reading of the map rather than a measurement.
 
 Method
 
-1.  Collection. BigQuery extraction under Redditâs Research Data
-    Addendum, filtered by score and length, stratified to 660 posts with
-    their comment threads.
+1.  Collection. BigQuery extraction through the Reddit for Researchers Analytics Hub under a Research Data Addendum. time scope: 1 January 2020 to 31 December 2025. Two retrieval routes, keyword-targeted and high-engagement, pooled. Quality gate: score ≥ 50 and body ≥ 250 characters, r/StackAdvice calibrated to 25 and 50. 660 submissions admitted with their full comment threads; 609 certified after cleaning. Parameters in Appendix B.
 
-2.  Coding. Llama 3.1 via Ollama, six parallel workers (, codebook in ).
+2.  Coding. Llama 3.1 via Ollama, local, structured JSON output. 24-code deductive codebook *compiled from existing academic literature, Appendix A. Every allocation stored with source text, evidence quote and confidence rating.
 
-3.  Reliability. Researcher-coded subsample, second rater Gemma 3 12B
-    ().
+3.  Reliability. Researcher blind-coded 125 submissions, stratified across the six communities. Second rater Gemma 3 12B, reliability stage only. Cohen’s kappa at dimension level: 0.115, 0.151, 0.047. Table 4.3 and Appendix D
 
-4.  Map. Per-community counts frozen to , rendered by .
+4.  Map. Per-community counts frozen to file after data cleaning and was used to render the perception map
 
-Extraction parameters: . Architecture: .
 
-Demo
 
 The repository holds no Reddit data. A synthetic dataset runs the
 pipeline end to end:
